@@ -1,1 +1,6 @@
 # RAM-leetcode
+pip install pyvista
+import pyvista as pv
+
+text = pv.Text3D('Write better\n READMEs!')
+text.plot(cpos='xy')
