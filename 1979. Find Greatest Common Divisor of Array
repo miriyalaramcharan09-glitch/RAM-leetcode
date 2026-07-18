@@ -1,0 +1,25 @@
+class Solution {
+    public int findGCD(int[] nums) {
+      int small=nums[0];
+      int large=nums[0];
+      for(int i:nums) {
+        if(small>i){
+            small=i;
+        }
+      }
+      for(int i:nums){
+        if(large<i){
+            large=i;
+        }
+      }
+     return gcd(large,small);
+    }
+    static int gcd(int a,int b){
+    while (b != 0) {
+            int remainder =b;
+            b= a % b;
+            a = remainder;
+        }
+        return a;
+    }
+}
